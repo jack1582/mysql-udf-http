@@ -10,7 +10,7 @@ Website: http://code.google.com/p/mysql-udf-http
 
 
 
-====1. Install:====
+## 1. Install:
 
 ulimit -SHn 65535
 
@@ -20,11 +20,11 @@ cd mysql-udf-http-1.0/
 ./configure --prefix=/usr/local/webserver/mysql --with-mysql=/usr/local/webserver/mysql/bin/mysql_config
 make && make install
 
-====2. Enter to the MySQL console:====
+## 2. Enter to the MySQL console:
 
 /usr/local/webserver/mysql/bin/mysql -S /tmp/mysql.sock
 
-====3. Create the UDF function in the MySQL console:====
+## 3. Create the UDF function in the MySQL console:
 
 mysql>
 
@@ -33,7 +33,7 @@ create function http_post returns string soname 'mysql-udf-http.so';
 create function http_put returns string soname 'mysql-udf-http.so';
 create function http_delete returns string soname 'mysql-udf-http.so';
 
-====4. Usage:====
+## 4. Usage:
 
 (1). Description:
 
@@ -57,7 +57,7 @@ SELECT http_put('http://192.168.8.34:1978/key', 'This is value');
 SELECT http_get('http://192.168.8.34:1978/key');
 SELECT http_delete('http://192.168.8.34:1978/key');
 
-====5. How to drop the UDF function:====
+## 5. How to drop the UDF function:
 
 mysql>
 
