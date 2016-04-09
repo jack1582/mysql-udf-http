@@ -2,6 +2,14 @@ MySQL User-defined function (UDF) for HTTP GET/POST
 
 Website: http://code.google.com/p/mysql-udf-http
 
+> change log:
+> 
+> 1. bugfix: crash when curl_easy_perform returns error. fix: delete the strcpy
+> 2. error msg output when sth error occured in curl_easy_perform
+> 3. set timeout when the destination url does not work properly, e.g. no response in time, make sure the sql will not be blocked.
+
+
+
 ====1. Install:====
 
 ulimit -SHn 65535
