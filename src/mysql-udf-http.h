@@ -9,4 +9,5 @@ typedef struct st_curl_results st_curl_results;
 struct st_curl_results {
   char *result;
   size_t size;
+  CURL* curl;
 };
